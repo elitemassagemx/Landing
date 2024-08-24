@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Massage - Experiencia de lujo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Elite Massage</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#massages">Masajes</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Experimenta el lujo en Elite Massage</h1>
+                <p>Sumérgete en nuestros tratamientos premium de spa y rejuvenece tu cuerpo y mente</p>
+                
+                <div class="customization-options">
+                    <div class="language-selector">
+                        <h3>Idiomas / Languages</h3>
+                        <button class="flag-btn" data-lang="es"><span class="flag-icon flag-icon-mx"></span></button>
+                        <button class="flag-btn" data-lang="en"><span class="flag-icon flag-icon-us"></span></button>
+                        <button class="flag-btn" data-lang="he"><span class="flag-icon flag-icon-il"></span></button>
+                        <button class="flag-btn" data-lang="zh"><span class="flag-icon flag-icon-cn"></span></button>
+                    </div>
+                    
+                    <div class="theme-toggle">
+                        <button id="lightMode">Modo Claro</button>
+                        <button id="darkMode">Modo Oscuro</button>
+                    </div>
+                    
+                    <div class="massage-type-selector">
+                        <button class="massage-type-btn" data-type="individual">Masaje Individual</button>
+                        <button class="massage-type-btn" data-type="couple">Masaje en Pareja</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="massages" class="massage-types">
+            <div class="container">
+                <h2>Nuestras experiencias de masaje</h2>
+                <div id="massage-grid" class="massage-grid">
+                    <!-- Los tipos de masaje se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Otras secciones se agregarán aquí -->
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Elite Massage. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/525640020305" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+        <img src="whatsapp-icon.svg" alt="WhatsApp">
+    </a>
+</body>
+</html>
