@@ -3,74 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Massage - Experiencia de lujo</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"></script>
-    <script src="script.js" defer></script>
+    <title>Elite Spa</title>
+    <style>
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #f4f4f4; padding: 10px; text-align: center; }
+        .language-switcher img { width: 30px; cursor: pointer; margin: 5px; }
+        .container { text-align: center; padding: 20px; }
+        .button { padding: 10px 20px; margin: 10px; border-radius: 50%; border: 1px solid #333; cursor: pointer; }
+        .hidden { display: none; }
+        .massage { margin: 20px 0; }
+        .reserve-button, .book-now { background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+        .massage-card { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container header-content">
-            <div class="logo">Elite Massage</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#massages">Masajes</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
+        <div class="language-switcher">
+            <img src="path/to/mexico.png" alt="Español" onclick="changeLanguage('es')">
+            <img src="path/to/usa.png" alt="English" onclick="changeLanguage('en')">
+            <img src="path/to/israel.png" alt="עברית" onclick="changeLanguage('he')">
+            <img src="path/to/china.png" alt="中文" onclick="changeLanguage('zh')">
         </div>
+        <h1>Elite Spa</h1>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1>Experimenta el lujo en Elite Massage</h1>
-                <p>Sumérgete en nuestros tratamientos premium de spa y rejuvenece tu cuerpo y mente</p>
-                
-                <div class="customization-options">
-                    <div class="language-selector">
-                        <h3>Idiomas / Languages</h3>
-                        <button class="flag-btn" data-lang="es"><span class="flag-icon flag-icon-mx"></span></button>
-                        <button class="flag-btn" data-lang="en"><span class="flag-icon flag-icon-us"></span></button>
-                        <button class="flag-btn" data-lang="he"><span class="flag-icon flag-icon-il"></span></button>
-                        <button class="flag-btn" data-lang="zh"><span class="flag-icon flag-icon-cn"></span></button>
-                    </div>
-                    
-                    <div class="theme-toggle">
-                        <button id="lightMode">Modo Claro</button>
-                        <button id="darkMode">Modo Oscuro</button>
-                    </div>
-                    
-                    <div class="massage-type-selector">
-                        <button class="massage-type-btn" data-type="individual">Masaje Individual</button>
-                        <button class="massage-type-btn" data-type="couple">Masaje en Pareja</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="massages" class="massage-types">
-            <div class="container">
-                <h2>Nuestras experiencias de masaje</h2>
-                <div id="massage-grid" class="massage-grid">
-                    <!-- Los tipos de masaje se cargarán dinámicamente aquí -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Otras secciones se agregarán aquí -->
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Elite Massage. Todos los derechos reservados.</p>
+    <div class="container">
+        <h1>Selecciona tu masaje</h1>
+        
+        <!-- Botones para seleccionar tipo de masaje -->
+        <div>
+            <button class="button" onclick="showMassages('individual')">Masaje Individual</button>
+            <button class="button" onclick="showMassages('two')">Masaje para Dos Personas</button>
         </div>
-    </footer>
+        
+        <!-- Lista de masajes -->
+        <div id="massage-list">
+            <!-- Masaje 1 -->
+            <div class="massage hidden" data-type="individual two">
+                <h2>Masaje Relajante</h2>
+                <p>Descripción del masaje relajante.</p>
+                <button class="reserve-button" onclick="reserveNow()">Reservar ahora</button>
+            </div>
+            <!-- Masaje 2 -->
+            <div class="massage hidden" data-type="individual two">
+                <h2>Masaje Terapéutico</h2>
+                <p>Descripción del masaje terapéutico.</p>
+                <button class="reserve-button" onclick="reserveNow()">Reservar ahora</button>
+            </div>
+            <!-- Masaje 3 (solo para dos personas) -->
+            <div class="massage hidden" data-type="two">
+                <h2>Masaje de Pareja</h2>
+                <p>Descripción del masaje de pareja.</p>
+                <button class="reserve-button" onclick="reserveNow()">Reservar ahora</button>
+            </div>
+        </div>
 
-    <a href="https://wa.me/525640020305" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-        <img src="whatsapp-icon.svg" alt="WhatsApp">
-    </a>
+        <!-- Opcional: tarjetas de masaje -->
+        <section class="massages">
+            <div class="massage-card">
+                <h2>Masaje Individual Clásico</h2>
+                <p>Relájate con un masaje individual que se enfoca en aliviar tensiones.</p>
+                <button class="book-now" onclick="reserveNow('Masaje Individual Clásico')">Reserva Ahora</button>
+            </div>
+            <div class="massage-card">
+                <h2>Masaje en Pareja Relajante</h2>
+                <p>Disfruta de un masaje en pareja que conecta cuerpo y mente.</p>
+                <button class="book-now" onclick="reserveNow('Masaje en Pareja Relajante')">Reserva Ahora</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Función para mostrar los masajes según la selección
+        function showMassages(type) {
+            const massages = document.querySelectorAll('.massage');
+            massages.forEach(massage => {
+                if (massage.dataset.type.includes(type)) {
+                    massage.classList.remove('hidden');
+                } else {
+                    massage.classList.add('hidden');
+                }
+            });
+        }
+
+        // Función para redirigir a WhatsApp
+        function reserveNow(message = '') {
+            const defaultMessage = "Quiero reservar un masaje";
+            const finalMessage = message ? `Quiero reservar: ${message}` : defaultMessage;
+            window.location.href = `https://wa.me/?text=${encodeURIComponent(finalMessage)}`;
+        }
+
+        // Función para cambiar el idioma
+        function changeLanguage(lang) {
+            alert("Idioma cambiado a: " + lang);
+            // Aquí puedes implementar la lógica para cambiar el contenido de la página al idioma seleccionado
+        }
+    </script>
 </body>
 </html>
