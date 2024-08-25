@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Spa</title>
+    <title>Elite Spa - Masajes en Pareja</title>
     <style>
-        /* Estilos básicos */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background-color: #f4f4f4; padding: 10px; text-align: center; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+        header { background-color: #f8f8f8; padding: 20px 0; text-align: center; }
         .language-switcher img { width: 30px; cursor: pointer; margin: 5px; }
-        .container { text-align: center; padding: 20px; }
-        .button { padding: 10px 20px; margin: 10px; border-radius: 50%; border: 1px solid #333; cursor: pointer; }
-        .hidden { display: none; }
-        .massage { margin: 20px 0; }
-        .reserve-button, .book-now { background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
-        .massage-card { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .massage-card { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .book-now { background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        .carousel { /* Estilos para el carrusel */ }
+        #map { height: 400px; width: 100%; }
+        .package { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .testimonial { font-style: italic; margin: 20px 0; }
+        footer { background-color: #333; color: white; text-align: center; padding: 20px 0; }
     </style>
 </head>
 <body>
@@ -22,83 +23,83 @@
         <div class="language-switcher">
             <img src="path/to/mexico.png" alt="Español" onclick="changeLanguage('es')">
             <img src="path/to/usa.png" alt="English" onclick="changeLanguage('en')">
-            <img src="path/to/israel.png" alt="עברית" onclick="changeLanguage('he')">
-            <img src="path/to/china.png" alt="中文" onclick="changeLanguage('zh')">
         </div>
         <h1>Elite Spa</h1>
     </header>
 
     <div class="container">
-        <h1>Selecciona tu masaje</h1>
-        
-        <!-- Botones para seleccionar tipo de masaje -->
-        <div>
-            <button class="button" onclick="showMassages('individual')">Masaje Individual</button>
-            <button class="button" onclick="showMassages('two')">Masaje para Dos Personas</button>
-        </div>
-        
-        <!-- Lista de masajes -->
-        <div id="massage-list">
-            <!-- Masaje 1 -->
-            <div class="massage hidden" data-type="individual two">
-                <h2>Masaje Relajante</h2>
-                <p>Descripción del masaje relajante.</p>
-                <button class="reserve-button" onclick="reserveNow()">Reservar ahora</button>
-            </div>
-            <!-- Masaje 2 -->
-            <div class="massage hidden" data-type="individual two">
-                <h2>Masaje Terapéutico</h2>
-                <p>Descripción del masaje terapéutico.</p>
-                <button class="reserve-button" onclick="reserveNow()">Reservar ahora</button>
-            </div>
-            <!-- Masaje 3 (solo para dos personas) -->
-            <div class="massage hidden" data-type="two">
-                <h2>Masaje de Pareja</h2>
-                <p>Descripción del masaje de pareja.</p>
-                <button class="reserve-button" onclick="reserveNow()">Reservar ahora</button>
-            </div>
-        </div>
+        <section class="carousel">
+            <!-- Agregar imágenes del carrusel aquí -->
+        </section>
 
-        <!-- Opcional: tarjetas de masaje -->
         <section class="massages">
+            <h2>Nuestros Masajes en Pareja</h2>
             <div class="massage-card">
-                <h2>Masaje Individual Clásico</h2>
-                <p>Relájate con un masaje individual que se enfoca en aliviar tensiones.</p>
-                <button class="book-now" onclick="reserveNow('Masaje Individual Clásico')">Reserva Ahora</button>
+                <h3>Masaje en Pareja de Aromaterapia</h3>
+                <p>Sumérgete en un oasis de tranquilidad junto a tu pareja con un masaje relajante de aromaterapia.</p>
+                <p><strong>Beneficios:</strong> Alivio del estrés, mejora del estado de ánimo y reducción de tensiones musculares.</p>
+                <p><strong>Duración:</strong> 60 minutos</p>
+                <button class="book-now" onclick="reserveNow('Masaje en Pareja de Aromaterapia')">Reserva Ahora</button>
             </div>
-            <div class="massage-card">
-                <h2>Masaje en Pareja Relajante</h2>
-                <p>Disfruta de un masaje en pareja que conecta cuerpo y mente.</p>
-                <button class="book-now" onclick="reserveNow('Masaje en Pareja Relajante')">Reserva Ahora</button>
+            <!-- Agregar más tarjetas de masaje aquí -->
+        </section>
+
+        <section class="packages">
+            <h2>Paquetes Especiales</h2>
+            <div class="package">
+                <h3>Paquete Romance Total</h3>
+                <p>Incluye masaje en pareja, cena romántica y acceso al spa.</p>
+                <button class="book-now" onclick="reserveNow('Paquete Romance Total')">Reserva Ahora</button>
             </div>
+            <!-- Agregar más paquetes aquí -->
+        </section>
+
+        <section class="booking">
+            <h2>Reserva tu Experiencia</h2>
+            <form id="bookingForm">
+                <!-- Agregar campos del formulario aquí -->
+                <button type="submit">Enviar Reserva</button>
+            </form>
+        </section>
+
+        <section class="map">
+            <h2>Nuestra Ubicación</h2>
+            <div id="map"></div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Lo que Dicen Nuestros Clientes</h2>
+            <div class="testimonial">
+                <p>"Una experiencia increíble. Totalmente recomendado para parejas." - María y Juan</p>
+            </div>
+            <!-- Agregar más testimonios aquí -->
         </section>
     </div>
 
+    <footer>
+        <p>&copy; 2024 Elite Spa. Todos los derechos reservados.</p>
+        <a href="https://www.instagram.com/elitemassagemx" target="_blank">Síguenos en Instagram</a>
+    </footer>
+
     <script>
-        // Función para mostrar los masajes según la selección
-        function showMassages(type) {
-            const massages = document.querySelectorAll('.massage');
-            massages.forEach(massage => {
-                if (massage.dataset.type.includes(type)) {
-                    massage.classList.remove('hidden');
-                } else {
-                    massage.classList.add('hidden');
-                }
-            });
+        function reserveNow(service) {
+            const message = `Hola, me gustaría reservar: ${service}`;
+            window.location.href = `https://wa.me/+5215640020305?text=${encodeURIComponent(message)}`;
         }
 
-        // Función para redirigir a WhatsApp
-        function reserveNow(message = '') {
-            const defaultMessage = "Quiero reservar un masaje";
-            const finalMessage = message ? `Quiero reservar: ${message}` : defaultMessage;
-            window.location.href = `https://wa.me/?text=${encodeURIComponent(finalMessage)}`;
-        }
-
-        // Función para cambiar el idioma
         function changeLanguage(lang) {
-            alert("Idioma cambiado a: " + lang);
-            // Aquí puedes implementar la lógica para cambiar el contenido de la página al idioma seleccionado
+            // Implementar cambio de idioma
         }
+
+        function initMap() {
+            // Implementar mapa de Google
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Procesar formulario y enviar a WhatsApp
+        });
     </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
