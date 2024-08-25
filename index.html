@@ -3,103 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Spa - Masajes en Pareja</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-        header { background-color: #f8f8f8; padding: 20px 0; text-align: center; }
-        .language-switcher img { width: 30px; cursor: pointer; margin: 5px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .massage-card { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .book-now { background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-        .carousel { /* Estilos para el carrusel */ }
-        #map { height: 400px; width: 100%; }
-        .package { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
-        .testimonial { font-style: italic; margin: 20px 0; }
-        footer { background-color: #333; color: white; text-align: center; padding: 20px 0; }
-    </style>
+    <title>Tu Centro de Masajes - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="language-switcher">
-            <img src="path/to/mexico.png" alt="Español" onclick="changeLanguage('es')">
-            <img src="path/to/usa.png" alt="English" onclick="changeLanguage('en')">
-        </div>
-        <h1>Elite Spa</h1>
+        <nav>
+            <div class="logo">
+                <img src="path/to/your/logo.png" alt="Logo del Centro de Masajes">
+            </div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <div class="container">
-        <section class="carousel">
-            <!-- Agregar imágenes del carrusel aquí -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <main>
+        <section id="inicio">
+            <h1>Bienvenido a Tu Centro de Masajes</h1>
+            <p>Descubre la experiencia única de nuestros masajes y terapias</p>
         </section>
 
-        <section class="massages">
-            <h2>Nuestros Masajes en Pareja</h2>
-            <div class="massage-card">
-                <h3>Masaje en Pareja de Aromaterapia</h3>
-                <p>Sumérgete en un oasis de tranquilidad junto a tu pareja con un masaje relajante de aromaterapia.</p>
-                <p><strong>Beneficios:</strong> Alivio del estrés, mejora del estado de ánimo y reducción de tensiones musculares.</p>
-                <p><strong>Duración:</strong> 60 minutos</p>
-                <button class="book-now" onclick="reserveNow('Masaje en Pareja de Aromaterapia')">Reserva Ahora</button>
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <!-- Aquí irán tus servicios -->
             </div>
-            <!-- Agregar más tarjetas de masaje aquí -->
         </section>
 
-        <section class="packages">
+        <section id="paquetes">
             <h2>Paquetes Especiales</h2>
-            <div class="package">
-                <h3>Paquete Romance Total</h3>
-                <p>Incluye masaje en pareja, cena romántica y acceso al spa.</p>
-                <button class="book-now" onclick="reserveNow('Paquete Romance Total')">Reserva Ahora</button>
+            <div class="paquetes-grid">
+                <!-- Aquí irán tus paquetes -->
             </div>
-            <!-- Agregar más paquetes aquí -->
         </section>
 
-        <section class="booking">
-            <h2>Reserva tu Experiencia</h2>
-            <form id="bookingForm">
-                <!-- Agregar campos del formulario aquí -->
-                <button type="submit">Enviar Reserva</button>
-            </form>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Dirección: Tu dirección aquí</p>
+            <p>Teléfono: Tu número aquí</p>
+            <p>Email: Tu email aquí</p>
         </section>
-
-        <section class="map">
-            <h2>Nuestra Ubicación</h2>
-            <div id="map"></div>
-        </section>
-
-        <section class="testimonials">
-            <h2>Lo que Dicen Nuestros Clientes</h2>
-            <div class="testimonial">
-                <p>"Una experiencia increíble. Totalmente recomendado para parejas." - María y Juan</p>
-            </div>
-            <!-- Agregar más testimonios aquí -->
-        </section>
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Elite Spa. Todos los derechos reservados.</p>
-        <a href="https://www.instagram.com/elitemassagemx" target="_blank">Síguenos en Instagram</a>
+        <p>&copy; 2024 Tu Centro de Masajes. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        function reserveNow(service) {
-            const message = `Hola, me gustaría reservar: ${service}`;
-            window.location.href = `https://wa.me/+5215640020305?text=${encodeURIComponent(message)}`;
-        }
-
-        function changeLanguage(lang) {
-            // Implementar cambio de idioma
-        }
-
-        function initMap() {
-            // Implementar mapa de Google
-        }
-
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Procesar formulario y enviar a WhatsApp
-        });
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
+
+<section id="servicios">
+    <h2>Nuestros Servicios de Masaje</h2>
+    <div class="servicios-grid">
+        <div class="servicio-item">
+            <img src="path/to/aromaterapia.jpg" alt="Masaje de Aromaterapia">
+            <h3>Masaje de Aromaterapia</h3>
+            <p>Disfruta de un masaje relajante con aceites esenciales personalizados.</p>
+            <a href="#" class="btn">Más información</a>
+        </div>
+        <div class="servicio-item">
+            <img src="path/to/piedras-calientes.jpg" alt="Masaje de Piedras Calientes">
+            <h3>Masaje de Piedras Calientes</h3>
+            <p>Relájate con el calor reconfortante de piedras lisas y calientes.</p>
+            <a href="#" class="btn">Más información</a>
+        </div>
+        <!-- Añade más servicios siguiendo el mismo patrón -->
+    </div>
+</section>
+
+<section id="paquetes">
+    <h2>Paquetes Especiales para Parejas</h2>
+    <div class="paquetes-grid">
+        <div class="paquete-item">
+            <h3>Paquete Romance Total</h3>
+            <p>Incluye: Masaje en Pareja de Aromaterapia, Copa de Vino, Fresas con Chocolate, y Tabla de Quesos Gourmet.</p>
+            <p class="precio">$XXX</p>
+            <a href="#" class="btn">Reservar</a>
+        </div>
+        <div class="paquete-item">
+            <h3>Paquete Lujo y Sabor</h3>
+            <p>Incluye: Masaje de Piedras Calientes en Pareja, Copa de Vino, Fresas con Chocolate, y Selección de Quesos y Vino.</p>
+            <p class="precio">$XXX</p>
+            <a href="#" class="btn">Reservar</a>
+        </div>
+        <!-- Añade más paquetes siguiendo el mismo patrón -->
+    </div>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contacto-container">
+        <div class="info-contacto">
+            <p>Dirección: Tu dirección aquí</p>
+            <p>Teléfono: Tu número aquí</p>
+            <p>Email: Tu email aquí</p>
+        </div>
+        <form id="formulario-contacto">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </div>
+</section>
+
+<section id="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonios-container">
+        <div class="testimonio">
+            <p>"Una experiencia increíble. El masaje fue relajante y el ambiente muy acogedor."</p>
+            - María G.
+        </div>
+        <div class="testimonio">
+            <p>"El paquete para parejas superó nuestras expectativas. ¡Volveremos pronto!"</p>
+            - Juan y Laura
+        </div>
+        <div class="testimonio">
+            <p>"Los terapeutas son muy profesionales y atentos. Altamente recomendado."</p>
+            - Carlos R.
+        </div>
+    </div>
+</section>
+<section id="galeria">
+    <h2>Nuestras Instalaciones</h2>
+    <div class="galeria-container">
+        <img src="path/to/image1.jpg" alt="Sala de masajes">
+        <img src="path/to/image2.jpg" alt="Área de relajación">
+        <img src="path/to/image3.jpg" alt="Recepción">
+        <img src="path/to/image4.jpg" alt="Productos de spa">
+        <!-- Añade más imágenes según sea necesario -->
+    </div>
+</section>
+
+<section id="home-slider">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('path/to/image1.jpg');">
+        <div class="slide-content">
+          <h2>Bienvenido a Nuestro Centro de Masajes</h2>
+          <p>Descubre la experiencia única de nuestros tratamientos</p>
+          <a href="#" class="btn">Reservar Ahora</a>
+        </div>
+      </div>
+      <!-- Más slides aquí -->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<section id="home-slider">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('path/to/image1.jpg');">
+        <div class="slide-content">
+          <h2>Bienvenido a Nuestro Centro de Masajes</h2>
+          <p>Descubre la experiencia única de nuestros tratamientos</p>
+          <a href="#" class="btn">Reservar Ahora</a>
+        </div>
+      </div>
+      <!-- Más slides aquí -->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<section id="servicios" class="section-padding">
+  <div class="container">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="service-icon">
+          <img src="path/to/icon1.png" alt="Icono Masaje">
+        </div>
+        <h3>Masaje Relajante</h3>
+        <p>Disfruta de un masaje que alivia el estrés y relaja los músculos.</p>
+        <a href="#" class="btn-more">Saber más</a>
+      </div>
+      <!-- Más servicios aquí -->
+    </div>
+  </div>
+</section>
+
+<div id="sppb-addon-1623218012553" class="clearfix">
+    <div id="sppb-sp-slider-1623218012553" class="sppb-addon-sp-slider sp-slider">
+        <div id="sp-slider-item-1623218012553-num-0-key" class="sp-item active">
+            <div class="sp-slider-content-wrap">
+                <div class="sp-slider-content-align-center">
+                    <h1 id="sp-slider-inner-item-1623218012554-num-0-key" class="sppb-sp-slider-title">
+                        LUXURY MASSAGE & SPA SERVICES
+                    </h1>
+                    <div id="sp-slider-inner-item-1623218012554-num-1-key" class="sppb-sp-slider-image">
+                        <img src="/images/1line.png" alt=""/>
+                    </div>
+                    <div id="sp-slider-inner-item-1623218012554-num-2-key" class="sppb-sp-slider-text">
+                        <div>Disfruta de un viaje de bienestar, salud y relajación.</div>
+                    </div>
+                    <a id="sp-slider-inner-item-1623218012554-num-3-key" class="sppb-sp-slider-button" href="/reservas">
+                        <span class="sp-slider-btn-text">RESERVA AHORA</span>
+                    </a>
+                </div>
+            </div>
+            <div class="sp-background" style="background-image: url(/images/slider-background.jpg);"></div>
+        </div>
+        <!-- Puedes añadir más slides siguiendo la misma estructura -->
+    </div>
+</div>
+
+<section id="section-id-1669370440205" class="sppb-section">
+    <div class="sppb-container-inner">
+        <div class="sppb-row">
+            <div class="sppb-col-md-12">
+                <div id="sppb-addon-1669717029131" class="clearfix">
+                    <div class="sppb-addon sppb-addon-header sppb-text-center">
+                        <h2 class="sppb-addon-title">Nuestros Servicios de Masaje</h2>
+                    </div>
+                </div>
+                <div id="sppb-addon-1669717029136" class="clearfix">
+                    <div class="sppb-addon sppb-addon-single-image sppb-text-center">
+                        <img src="/images/1line.png" alt="Separador" />
+                    </div>
+                </div>
+                <div id="sppb-addon-1669329464976" class="clearfix">
+                    <div class="sppb-addon sppb-addon-text-block sppb-text-center">
+                        <div class="sppb-addon-content">
+                            Libera tu mente y siente un bienestar único en tu cuerpo. En nuestro centro de masajes puedes elegir entre más de 12 programas de masaje y liberar la tensión de tu cuerpo relajándote en nuestro espacio único de spa.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section-id-1669370440181" class="sppb-section">
+    <div class="sppb-container-inner">
+        <div class="sppb-row sppb-no-gutter">
+            <div class="sppb-col-md-4">
+                <div id="sppb-addon-1669291430035" class="clearfix">
+                    <div class="sppb-addon sppb-addon-feature">
+                        <div class="sppb-addon-content sppb-text-center">
+                            <span class="sppb-img-container">
+                                <img class="sppb-img-responsive" src="/images/spa-icon.png" alt="SERVICIOS DE SPA">
+                            </span>
+                            <div class="sppb-media-content">
+                                <h3 class="sppb-addon-title sppb-feature-box-title">SERVICIOS DE SPA</h3>
+                                <div class="sppb-addon-text">Disfruta de la magia del spa para 2 personas</div>
+                                <a href="/reservas" class="sppb-btn sppb-btn-link">RESERVA AHORA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repite esta estructura para las otras dos características -->
+        </div>
+    </div>
+</section>
+
+
+
+<section id="reservas" class="sppb-section">
+    <div class="sppb-container-inner">
+        <h2 class="sppb-addon-title">Reserva tu sesión</h2>
+        <form id="reserva-form" class="sppb-form-validate">
+            <div class="sppb-form-group">
+                <input type="text" name="nombre" class="sppb-form-control" placeholder="Nombre completo" required>
+            </div>
+            <div class="sppb-form-group">
+                <input type="email" name="email" class="sppb-form-control" placeholder="Email" required>
+            </div>
+            <div class="sppb-form-group">
+                <input type="tel" name="telefono" class="sppb-form-control" placeholder="Teléfono" required>
+            </div>
+            <div class="sppb-form-group">
+                <select name="servicio" class="sppb-form-control" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="masaje-relajante">Masaje Relajante</option>
+                    <option value="masaje-terapeutico">Masaje Terapéutico</option>
+                    <!-- Añade más opciones según tus servicios -->
+                </select>
+            </div>
+            <div class="sppb-form-group">
+                <input type="date" name="fecha" class="sppb-form-control" required>
+            </div>
+            <div class="sppb-form-group">
+                <input type="time" name="hora" class="sppb-form-control" required>
+            </div>
+            <div class="sppb-form-group">
+                <textarea name="mensaje" class="sppb-form-control" placeholder="Mensaje adicional (opcional)"></textarea>
+            </div>
+            <div class="sppb-form-group">
+                <button type="submit" class="sppb-btn sppb-btn-primary">Reservar ahora</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Tu Centro de Masajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Incluye aquí tu navegación -->
+    </header>
+
+    <main>
+        <section id="sobre-nosotros" class="sppb-section">
+            <div class="sppb-container-inner">
+                <h1 class="sppb-addon-title">Sobre Nosotros</h1>
+                <div class="sppb-addon-content">
+                    <p>En [Nombre de tu centro], nos dedicamos a proporcionar experiencias de bienestar excepcionales. Nuestro equipo de terapeutas altamente capacitados se esfuerza por ofrecer los mejores tratamientos de masaje y spa.</p>
+                    <p>Fundado en [año], hemos estado sirviendo a nuestra comunidad con pasión y dedicación, ayudando a nuestros clientes a encontrar la relajación y el rejuvenecimiento que merecen.</p>
+                </div>
+                <div class="sppb-addon-image-content">
+                    <img src="/images/about-us.jpg" alt="Nuestro equipo" class="sppb-img-responsive">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Incluye aquí tu pie de página -->
+    </footer>
+</body>
+</html>
+
+<section id="ubicacion" class="sppb-section">
+    <div class="sppb-container-inner">
+        <h2 class="sppb-addon-title">Nuestra Ubicación</h2>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </div>
+</section>
+
+<script>
+function initMap() {
+    var location = {lat: LATITUD, lng: LONGITUD}; // Reemplaza con tus coordenadas
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location
+    });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<div data-aos="fade-up" data-aos-duration="1000">
+    Este elemento se animará al hacer scroll
+</div>
+
+<section class="parallax-section">
+    <div class="sppb-container-inner">
+        <h2 data-aos="fade-up">Experimenta la relajación</h2>
+    </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Masajes - Relajación y Bienestar</title>
+    <meta name="description" content="Descubre nuestros servicios de masajes y spa. Ofrecemos una experiencia única de relajación y bienestar en [Tu Ciudad].">
+    <link rel="canonical" href="https://www.tudominio.com">
+    <meta property="og:title" content="Centro de Masajes - Relajación y Bienestar">
+    <meta property="og:description" content="Experimenta la mejor relajación con nuestros servicios de masajes y spa.">
+    <meta property="og:image" content="https://www.tudominio.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.tudominio.com">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SpaAndBeautyBusiness",
+      "name": "Tu Centro de Masajes",
+      "image": "https://www.tudominio.com/images/logo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tu Dirección",
+        "addressLocality": "Tu Ciudad",
+        "postalCode": "Tu Código Postal",
+        "addressCountry": "MX"
+      },
+      "telephone": "+52-123-456-7890",
+      "url": "https://www.tudominio.com"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegación principal">
+            <!-- Tu menú de navegación aquí -->
+        </nav>
+    </header>
+    <main id="contenido-principal">
+        <!-- Contenido principal aquí -->
+    </main>
+    <footer>
+        <!-- Pie de página aquí -->
+    </footer>
+</body>
+</html>
+<section id="testimonios" class="sppb-section">
+    <div class="sppb-container-inner">
+        <h2 class="sppb-addon-title">Lo que dicen nuestros clientes</h2>
+        <div class="testimonios-carrusel">
+            <div class="testimonio">
+                <p>"Una experiencia increíble. El masaje fue relajante y el ambiente muy acogedor."</p>
+                - María G.
+            </div>
+            <div class="testimonio">
+                <p>"El paquete para parejas superó nuestras expectativas. ¡Volveremos pronto!"</p>
+                - Juan y Laura
+            </div>
+            <!-- Más testimonios aquí -->
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.testimonios-carrusel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    });
+</script>

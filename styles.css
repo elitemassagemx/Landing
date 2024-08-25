@@ -1,228 +1,324 @@
-:root {
-    --primary-color: #ffd700;
-    --secondary-color: #000;
-    --text-color: #333;
-    --bg-color: #f4f4f4;
-}
+CSS CLAUDE
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    color: #333;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Styles */
 header {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #e0e0e0; /* Línea inferior para destacar la cabecera */
+    background-color: #f4f4f4;
+    padding: 1rem;
 }
 
-.header-content {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 nav ul {
     list-style-type: none;
-    padding: 0;
     display: flex;
 }
 
 nav ul li {
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 nav ul li a {
-    color: var(--primary-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: #333;
 }
 
-nav ul li a:hover {
-    color: #fff;
+main {
+    padding: 2rem;
 }
 
-/* Language Switcher Styles */
-.language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
-    z-index: 1000; /* Asegura que las banderas se mantengan por encima de otros elementos */
-}
-
-.language-switcher img {
-    width: 24px; /* Tamaño pequeño para las banderas */
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Animación suave al hacer hover */
-}
-
-.language-switcher img:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño al hacer hover */
-}
-
-/* Hero Section Styles */
-.hero {
-    background-image: url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
+section {
     margin-bottom: 2rem;
 }
 
-/* Customization Options Styles */
-.customization-options {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    border-radius: 10px;
-    margin-top: 2rem;
+h1, h2 {
+    color: #2c3e50;
 }
 
-.language-selector, .theme-toggle, .massage-type-selector {
-    margin-bottom: 1rem;
-}
-
-.flag-btn, .theme-toggle button, .massage-type-btn {
-    background: none;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.flag-btn:hover, .theme-toggle button:hover, .massage-type-btn:hover,
-.flag-btn.active, .theme-toggle button.active, .massage-type-btn.active {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-/* Massage Types Section Styles */
-.massage-types {
-    padding: 4rem 0;
-}
-
-.massage-grid {
+.servicios-grid, .paquetes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
 
-.massage-card {
-    background-color: #fff;
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilos para la sección de servicios */
+.servicio-item {
+    background: #fff;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.massage-card:hover {
+.servicio-item:hover {
     transform: translateY(-5px);
 }
 
-.massage-card img {
+.servicio-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.servicio-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección de paquetes */
+.paquete-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.paquete-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.paquete-item h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.paquete-item .precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.contacto-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.info-contacto, #formulario-contacto {
+    flex-basis: 48%;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#formulario-contacto textarea {
+    height: 150px;
+}
+
+.testimonios-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonio {
+    flex-basis: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonio p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonio cite {
+    font-weight: bold;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria-container img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.massage-card h3, .massage-card p {
-    padding: 0 15px;
-    margin: 10px 0;
+.galeria-container img:hover {
+    transform: scale(1.05);
 }
 
-.book-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-.book-button:hover {
-    background-color: #e5c100;
-}
 
-/* WhatsApp Button Styles */
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.whatsapp-button img {
-    width: 60px;
-    height: 60px;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    --bg-color: #222;
-    --text-color: #f4f4f4;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .header-content {
+    .servicios-grid,
+    .paquetes-grid,
+    .contacto-container,
+    .testimonios-container {
         flex-direction: column;
     }
 
+    .servicio-item,
+    .paquete-item,
+    .info-contacto,
+    #formulario-contacto,
+    .testimonio {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
     nav ul {
-        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .customization-options {
-        padding: 1rem;
-    }
-
-    .flag-btn, .theme-toggle button, .massage-type-btn {
-        margin: 0.5rem; 
+    nav ul li {
+        margin: 10px 0;
     }
 }
 
+body {
+  font-family: 'Playfair Display', serif; /* Fuente más elegante */
+  background: url('path/to/texture.png') repeat; /* Textura de fondo */
+}
+
+.section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #golden-color;
+  margin: 20px auto 0;
+}
+
+.btn {
+  background: linear-gradient(to right, #golden-color-1, #golden-color-2);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.sp-slider .sp-dots ul li {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 18px;
+    height: 18px;
+    width: 18px;
+}
+
+.sp-slider .sp-nav-control .nav-control {
+    border-color: rgba(255, 248, 236, 0);
+    border-radius: 50px;
+    border-width: 0px;
+    color: #261E15;
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+}
+
+.sppb-addon-feature {
+    background: #efd9aa;
+    padding: 60px 95px 55px 95px;
+    transition: .3s;
+}
+
+.sppb-addon-feature:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sppb-addon-feature .sppb-img-container {
+    display: inline-block;
+    background: #e3c396;
+    border-radius: 100px;
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.sppb-addon-feature .sppb-addon-title {
+    margin-top: 42px;
+    margin-bottom: 13px;
+    color: #4A4A4A;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+
+@media (max-width: 767px) {
+    .sppb-addon-feature {
+        padding: 30px;
+    }
+
+    .sp-slider .sp-nav-control {
+        display: none;
+    }
+
+    .sppb-addon-title {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+    }
+}
+
+.parallax-section {
+    background-image: url('tu-imagen.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px; /* Ajusta según sea necesario */
+}
